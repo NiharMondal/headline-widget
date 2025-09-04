@@ -29,7 +29,7 @@ export default function RootLayout({
 			>
 				<main>
 					{children}
-					<footer className="mx-auto max-w-6xl px-4 pb-10 text-center text-xs text-slate-500">
+					<footer className="mx-auto max-w-6xl px-4 py-10 text-center text-xs text-slate-500">
 						Built with{" "}
 						<span className="font-semibold">
 							React + TypeScript + Tailwind + Framer Motion

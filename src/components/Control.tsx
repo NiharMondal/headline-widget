@@ -2,8 +2,9 @@
 
 import { useHeadline } from "@/context/headline-context";
 import { useMemo } from "react";
+import Exportable from "./Exportable";
 
-export default function Control() {
+export default function Controls() {
 	const { state, setHeadline } = useHeadline();
 	const words = useMemo(() => {
 		// Keep spaces by splitting and re-inserting them
@@ -320,43 +321,7 @@ export default function Control() {
 				</div>
 
 				{/* Export */}
-				{/* <div className="space-y-2 rounded-xl border border-slate-200 p-3">
-					<div className="flex items-center justify-between">
-						<span className="text-sm font-medium">Export</span>
-						<button
-							className="rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
-							onClick={() => copy(jsonAreaRef.current)}
-						>
-							Copy JSON
-						</button>
-					</div>
-					<textarea
-						ref={jsonAreaRef}
-						value={json}
-						readOnly
-						rows={6}
-						className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 p-2 font-mono text-xs"
-					/>
-
-					<div className="flex items-center justify-between">
-						<span className="text-sm font-medium">
-							Embeddable snippet
-						</span>
-						<button
-							className="rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
-							onClick={() => copy(embedAreaRef.current)}
-						>
-							Copy snippet
-						</button>
-					</div>
-					<textarea
-						ref={embedAreaRef}
-						value={embedCode}
-						readOnly
-						rows={10}
-						className="w-full resize-y rounded-xl border border-slate-200 bg-slate-50 p-2 font-mono text-xs"
-					/>
-				</div> */}
+				<Exportable />
 			</div>
 		</aside>
 	);
